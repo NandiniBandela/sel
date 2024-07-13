@@ -16,7 +16,7 @@ public class DataBaseUtility {
 		try {
 			Driver driver = new Driver();
 			DriverManager.registerDriver(driver);
-			DriverManager.getConnection(url, username, password);
+			conn=DriverManager.getConnection(url, username, password);
 		} catch (Exception e) {
 			System.out.println("Exception Handled in DatabaseUtility");
 		}
@@ -26,7 +26,7 @@ public class DataBaseUtility {
 		try {
 			Driver driver = new Driver();
 			DriverManager.registerDriver(driver);
-			DriverManager.getConnection("jdbc:mysql://106.51.90.215:3333/projects", "root@%", "root");
+			conn=DriverManager.getConnection("jdbc:mysql://106.51.90.215:3333/projects", "root@%", "root");
 		} catch (Exception e) {
 			System.out.println("Exception Handled in DatabaseUtility");
 		}
